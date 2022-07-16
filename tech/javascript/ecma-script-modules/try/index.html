@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+  <h1>ESM test</h1>
+  <p>Most simple test - imports constant a and prints its value in console.</p>
+  <p>Open the console to see that import is working in the browser.</p>
+  <h2>Check network requests</h2>
+  <p>
+    Every imported file becomes a separate network request.
+    From one side we have automatic lazy loading because we don't have to
+    split our bundle with some webpack loadable plugins.
+    But from the other hand we would still need to at list minify our files
+    for production and we wouldn't want every single file to be 'lazy-loaded'
+    we would want to combine some part of the logic together in one bundle.
+    So it turns out webpack is still needed even if we don't care about
+    older browsers support.
+  </p>
+  <script type='module' src='/index.mjs'></script>
+</body></html>
