@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>try cancel fetch() request</title>
+</head>
+<body>
+  <h1>Example of fetch abort</h1>
+  <hr>
+  <button onclick='beginFetch();'>Begin</button>
+  <button onclick='abortFetch();'>Abort</button>
+  <script>
+    const controller = new AbortController();
+
+    const { signal } = controller;
+
+    async function beginFetch() {
+      console.log('fetching');
+
+      const url = 'https://httpbin.org/delay/3';
+      
+      try {
+        const res = await fetch(url, {
+          method: 'get',
+          signal,
+        });
+        
+        console.log('fetch completed (not aborted): ', res);
+      }
+      catch (e) {
+        console.error('Error: ', e);
+      }
+    }
+
+    async function abortFetch() {
+      console.log('aborting fetch');
+      controller.abort();
+    }
+  </script>
+</body>
+</html>
