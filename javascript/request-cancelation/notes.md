@@ -8,5 +8,9 @@ processing resources but will give no benefit.
 when to cancel the request. See [the example](./try-fetch/index.html).
 
 
+# Cancel HTTP fetch request with axios
+Its completely the same approach by using AbortController.
+
+
 # [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
 Allows to abort one or more web requests.
