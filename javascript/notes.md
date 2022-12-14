@@ -1,6 +1,7 @@
 # Contents
 - [GTM](#gtm)
 - [Request Cancelation](./request-cancelation/notes.md)
+- [Typescript](./typescript/notes.md)
 
 
 ## GTM

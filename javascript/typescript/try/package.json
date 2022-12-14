@@ -1,0 +1,16 @@
+{
+  "name": "try-typescript",
+  "version": "1.0.0",
+  "description": "try typescript compiler",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
