@@ -1,0 +1,19 @@
+{
+  "name": "try-axios",
+  "version": "1.0.0",
+  "description": "try request cancelation with axios and AbortController",
+  "main": "index.html",
+  "scripts": {
+    "build": "rm -rf dist; tsc; cp src/index.html dist/index.html",
+    "start": "build; cd ./dist; http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
