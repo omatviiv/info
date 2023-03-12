@@ -53,6 +53,4 @@ With the help of redux middleware based solution and TDD approach achieved
 effective business logic separation which makes ui and logic part much more
 stable and easier to upgrade or maintain.
 
-Attaching my concise CV. I didn't need to work over Upwork in the past as
-you would be able to see but I believe this shouldn't be any kind of an
-issue in the end Upwork is just a platform.
+Attaching my concise CV.
