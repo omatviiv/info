@@ -1,5 +1,3 @@
-Hi,
-
 I've got big commercial experience with creating react applications for
 multiple companies, took part or was leading multiple successful
 applications development for different companies from different parts of

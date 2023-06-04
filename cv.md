@@ -1,30 +1,65 @@
 # Oleh Matviiv
 
 Lviv, Ukraine
-
 **Birthday and status:** 1983-11-30, married, 3 kids
-
 **Contacts:** +38(067) 254-08-82, oleh.matviiv@gmail.com
 
-# Education, certificates, languages:
-- StreamServe Developer Certificate, 2011
-- International House language school, 2011-2012:
-- Certificate in English Language (Intermediate level), 2011
-  and Half of the course for upper intermediate level, 2012
+# Education, languages:
 - Franko National University of Lviv, 2000-2005.
   Faculty of Mechanics and Mathematics - mathematician, statistician
-
-Ukrainian (native), English (good writing and speaking)
+- Ukrainian (native), English (fluent technical communication)
 
 # Work experience
 ### Agility (USS): (09.2019 - till now)
-Leading ui development for Shipa project.
-- Configured modular system of reusable components that can be easily restyled.
-- Developed templates for quickly starting development of new applications.
-- Implemented authorisation according to Authorization Code Grant flow that works well different auth providers (Microsoft AD, IdentityServer4).
-- Developing several applications in parallel.
+Leading UI development for all Shipa projects:
 
-**Skills improved:** React, Nextjs, Nodejs, Oauth 2.0, styled-components, webpack, eslint, Redis, Docker.
+- Led and initiated the development of a company-specific shared UI
+components library, which is reused in all of the company's projects. This
+component library shares the same responsive designs and ensures
+accessibility across all company projects. However, the main highlight of
+this UI library solution is its style-agnostic components development
+approach, which I am continuously working to improve outside of working
+hours. You can find more information about this approach here:
+https://github.com/omatviiv/styleagnostic-input#style-agnostic-component-approach.
+
+- Led development of two customer-facing portals focused on SEO and performance,
+one using NextJS and another using Gatsby. Both portals offer high flexibility
+in configuration through a CMS.
+
+- Created two customer-facing complex web applications with custom
+authentication solutions, separation of concerns, lazy loading, and
+a node facade proxy (and more than just a proxy) server.
+
+- Rewrote an internal staff dashboard with custom authentication,
+separation of concerns, lazy loading, and a facade node server.
+
+- Worked on a UI project for a custom IdentityServer4-based authorization
+provider solution. This project supports completely different UI designs
+for various authentication clients, including sign-in, sign-up, sign-out,
+forgot password, and other authentication pages. Almost all dashboard
+applications utilize this authorization solution, each with different styling.
+
+- Developed several UI seed template projects for quickly starting
+development on new applications. These projects are built using a custom
+TypeScript/Webpack setup.
+
+- Created the redux-slice library, a small but powerful library inspired by
+Redux Toolkit. We could not use Redux Toolkit because its not flexible enough
+to support our separation of concerns approach. This library provides a raw
+Redux-based solution that supports the separation of concerns approach for
+business logic and significantly reduces boilerplate code, simplifying
+client-side state management in general. This library greatly facilitates
+the separation of concerns approach that I led the development of,
+providing a Redux-based approach that effectively separates business logic
+from visual presentation and allows for lazy loading of business logic.
+
+- Developed the auth-sdk library, which is based on openid-client. This
+library enables the usage of different authentication providers for any
+client application that requires OAuth 2.0 openid-compliant authorization.
+Currently, some applications use our custom IdentityServer4 authentication
+provider, while others use MS Active Directory.
+
+- Contributed to several other auxiliary small projects.
 
 ### Intellias: (06.2019 - 08.2019)
 Participate in enhancing story editor solution with some video creating capabilities.
@@ -71,11 +106,5 @@ ContentServer and related technologies, IIS web server, Perforce, oScript
 **Skills improved:** StreamServe and related technologies, OutputCenter XML,
 DTD, XSLT, XPath, PJL, LPR, SNMP, SMTP, POP3, IMAP, HTML, Tomcat PCL,
 PostScript, AFP, Intermec, ZPLII, Barcodes: Code 128, EAN 128      
-
-## Web-development (freelance on part time):
-I used to develop web-sites for different customers in Ukraine on part time, here are some examples:
-http://crystalband.com.ua, http://advocate.matviiv.com
-
-**Skills improved:**  JavaScript, PHP, Yii, HTML, CSS, SASS/SCSS, Git, Eclipse, Apache, Zurb Foundation
 
 ### Positions in banks (Finance & Credit, UkrSibbank, Kredobank) (20.07.2004 - 30.07.2010)
