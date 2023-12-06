@@ -1,8 +1,8 @@
 # Oleh Matviiv
 
-Lviv, Ukraine
+Cracow, Poland
 **Birthday and status:** 1983-11-30, married, 3 kids
-**Contacts:** +38(067) 254-08-82, oleh.matviiv@gmail.com
+**Contacts:** +48 571 795 617, oleh.matviiv@gmail.com
 
 # Education, languages:
 - Franko National University of Lviv, 2000-2005.
@@ -62,13 +62,15 @@ provider, while others use MS Active Directory.
 - Contributed to several other auxiliary small projects.
 
 ### Intellias: (06.2019 - 08.2019)
-Participate in enhancing story editor solution with some video creating capabilities.
+Participate in enhancing story editor solution with some video creating
+capabilities.
 
 **Skills improved:** React, Angular 2.0, Nodejs
 
-### Lohika as UI Developer: (11.2016 – 05.2019)
-- Reporting system development from scratch (front-end part)
-- Telecom project development
+### Lohika as UI Developer (Twilio): (11.2016 – 05.2019)
+I was taking part in development of two internal projects for Twilio
+from the very beginning till the projects release and few monthes
+supporting them and developing new features and fixing issues.
 
 **Skills improved:** JavaScript ES6, React, Redux, NodeJS, HTML5, CSS3, SASS/SCSS
 
