@@ -19,7 +19,7 @@ footprint components for React ecosystems. Here is github
 
 # Work experience
 ### Logistics company (usoftware): (09.2019 - till now)
-Leading UI development for all Shipa projects:
+Leading UI development for all company startup projects:
 
 - Led and initiated the development of a company-specific shared UI
 components library, which is reused in all of the company's projects. This
