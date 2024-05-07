@@ -7,10 +7,18 @@ Cracow, Poland
 # Education, languages:
 - Franko National University of Lviv, 2000-2005.
   Faculty of Mechanics and Mathematics - mathematician, statistician
-- Ukrainian (native), English (fluent technical communication)
+- Ukrainian (native)
+- English (fluent technical communication)
+- Polish (limited working proficiency, able to communicate)
+
+# Personal project
+### Styleagnostic
+Next iteration of company-wide hightly flexible and reusable minimal
+footprint components for React ecosystems. Here is github
+[project](https://github.com/users/omatviiv/projects/2?pane=info).
 
 # Work experience
-### Agility (USS): (09.2019 - till now)
+### Logistics company (usoftware): (09.2019 - till now)
 Leading UI development for all Shipa projects:
 
 - Led and initiated the development of a company-specific shared UI
