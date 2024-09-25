@@ -18,3 +18,16 @@ So from my point of view the best way to use this plugin is to simply
 save urls in vim variables for oftenly used dbs and then use the command
 without any aliases or extra commands on top of it simply passing the right
 vim variable.
+
+# System clipboard
+I used to paste text into vim simply by:
+- switching to insert mode
+- pressing `Cmd + v`
+Pasting text from system buffer this way became very slow after upgrade
+to Macos Sequoia.
+
+But this isn't the best wayt to paste text into vim from system clipboard.
+When pasting it with `Cmd + v` vim treats it as a user input and there is
+additional processing done by vim.
+
+The best way to paste text into vim is to use `"+p` command in normal mode.
