@@ -45,7 +45,7 @@ credentials on the PC.
 2. Make sure IAM IC user is created with some permissions.
 3. aws configure sso
 - SSO session name: omatviiv-sso 
-- SSO start url: take from IAM IC > Dashboard > Access portal rul
+- SSO start url: take from IAM IC > Dashboard > Access portal url
 - SSO region: eu-central-1
 - SSO registration scropes: leave defaults
 - approve in browser
@@ -88,7 +88,7 @@ will take precedence over CNAME record.
 
 
 
-# ACM Amazon Certificate Manager
+# Certificate Manager (ACM)
 Here certificates can be created for the domain. App public ACM certificates
 are free and you only pay for traffict etc.
 
@@ -128,6 +128,61 @@ It has to be s3 bucket website endpoint, not the bucket itself:
 - Alternate Domain Names (CNAMEs): mysite.domain.com
 - Custom SSL Certificate: select the certificate created in ACM (us-east-1 only)
 - Default Root Object: index.html
-7. Enable WAF for security
+7. Disable WAF for security
 8. Create distribution
-It may require additional account verification via AWS support.
+9. Modify DNS record and replace CNAME mysite value fro s3 bucket website to
+CloudFront distribution domain name, which should be something likke:
+`d4y0e7v6ugjsy.cloudfront.net`
+10. To make sure that CloudFront distribution has access to S3 we need to
+explicitly grant access. So go to S3 bucket > Permissions > Bucket policy
+> Edit and add one more statement:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    ...other statements...,
+    {
+      "Sid": "AllowCloudFrontServicePrincipalReadOnly",
+      "Effect": "Allow",
+      "Principal": {
+          "Service": "cloudfront.amazonaws.com"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::advocate.matviiv/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::YOUR_ACCOUNT_ID:distribution/CLOUD_DISTRIBUTION_ID"
+        }
+      }
+    }
+  ]
+}
+```
+
+
+
+
+# Route 53
+As godaddy doesn't allow to create CNAME record for root domain like vakull.com
+and it doesn't have ANAME record type adding A record with IP address of the
+cloudfront distribution url is not reliable because IP address can change.
+So we need to use Route 53 with ALIAS record to resolve this:
+1. Open Route 53 on AWS console.
+2. Hosted zones > Create hosted zone:
+  - Domain name: vakull.com
+  - Type: Public hosted zone
+3. click Create Hosted Zone
+4. Route 53 > Hosted zones > vakull.com > Create record:
+  - Record name: leave empty
+  - Record type: A - Routes traffic to an IPv4 address and/or AWS resource.
+  - Alias toggle - switch to Yes
+  - Route traffic to: select Alias to CloudFront distribution
+  - Alias target: select the CloudFront distribution
+  - Routing policy: Simple routing
+5. click Create records
+6. Change nameservers on GoDaddy:
+  - GoDaddy > Domains > vakull.com > DNS Management > Nameservers
+  - Change > Enter custom nameservers > add all 4 nameservers from Route 53
+    NS record only (ignore nameservers from SOA record)
+  - click Save
+  (it may take 24-48 hours for the changes to propagate)
